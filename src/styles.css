@@ -24,7 +24,7 @@ h1, h2, p { margin: 0; }
 main { padding-bottom: 52px; }
 .intro { padding-top: 35px; margin-bottom: 23px; }
 h1 { font-size: clamp(2.35rem, 4.2vw, 4.15rem); font-weight: 750; line-height: 1.04; letter-spacing: -.07em; }
-h1 em { color: var(--green); font-style: normal; }
+h1 em { color: var(--green); font-style: normal; white-space: nowrap; }
 .intro p { margin-top: 9px; font-size: 1rem; color: var(--muted); line-height: 1.5; }
 .tabs { display: flex; gap: 26px; border-bottom: 1px solid var(--line); }
 .tabs button { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 5px; margin-bottom: -1px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: var(--muted); cursor: pointer; font-weight: 650; font-size: .9375rem; }
@@ -79,7 +79,7 @@ h1 em { color: var(--green); font-style: normal; }
   .header-inner { min-height: 63px; gap: 5px; justify-content: space-between; }
   .header-feature { display: none; }
   .intro { padding-top: 25px; margin-bottom: 17px; }
-  .tabs { gap: clamp(6px, 3vw, 20px); }
+  .tabs { gap: clamp(6px, 3vw, 20px); flex-wrap: wrap; }
   .tabs button { gap: 5px; padding-inline: 2px; font-size: .875rem; }
   .tabs svg { width: 16px; flex: 0 0 16px; }
   .use-selector { display: block; }
@@ -88,4 +88,12 @@ h1 em { color: var(--green); font-style: normal; }
   .comparison { grid-template-columns: minmax(0, 1fr); gap: 14px; }
   .card-top { min-height: 32px; }
   main { padding-bottom: 28px; }
+}
+
+@media (max-width: 360px) {
+  .brand { font-size: 1.05rem; }
+  .brand-mark { width: 30px; height: 30px; margin-right: 6px; }
+  .demo-label { padding-inline: 6px; }
+  .tabs button { font-size: .8125rem; }
+  .tabs button svg { width: 14px; flex-basis: 14px; }
 }

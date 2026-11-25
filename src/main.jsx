@@ -127,7 +127,7 @@ function App() {
             <span className="recommendation-icon"><Icon name="star" size={21} /></span>
             <div>
               <p className="recommendation-label">Best value for this use</p>
-              <p className="recommendation-copy"><strong>{category.products[useCase.option].name}</strong><span className="reason-divider" aria-hidden="true"></span>{useCase.reason}</p>
+              <p className="recommendation-copy"><strong>{category.products[useCase.option].name}</strong><span className="reason-divider" aria-hidden="true"></span>{' '}{useCase.reason}</p>
             </div>
           </div>
           <div className="comparison" aria-label="Product comparison">
