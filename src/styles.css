@@ -1,0 +1,91 @@
+:root {
+  font-family: Inter, 'Segoe UI', system-ui, sans-serif;
+  color: #15291f;
+  background: #faf9f5;
+  font-synthesis: none;
+  --green: #194d38;
+  --muted: #506358;
+  --line: #dce4dc;
+  --mint: #e8f4ec;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; }
+button, input { font: inherit; }
+h1, h2, p { margin: 0; }
+.shell { width: min(1160px, calc(100% - 80px)); margin-inline: auto; }
+.header { background: #fffefb; border-bottom: 1px solid var(--line); }
+.header-inner { min-height: 72px; display: flex; align-items: center; gap: 20px; }
+.brand { display: inline-flex; align-items: center; font-weight: 750; font-size: 1.25rem; letter-spacing: -.045em; white-space: nowrap; }
+.brand-mark { display: grid; place-items: center; width: 35px; height: 35px; margin-right: 9px; border-radius: 10px; background: var(--green); color: white; }
+.brand-period { color: #3d815f; }
+.header-feature { padding-left: 20px; border-left: 1px solid var(--line); color: var(--muted); font-size: .875rem; }
+.demo-label { margin-left: auto; padding: 7px 11px; border: 1px solid var(--line); border-radius: 7px; font-size: .75rem; font-weight: 650; color: var(--muted); }
+main { padding-bottom: 52px; }
+.intro { padding-top: 35px; margin-bottom: 23px; }
+h1 { font-size: clamp(2.35rem, 4.2vw, 4.15rem); font-weight: 750; line-height: 1.04; letter-spacing: -.07em; }
+h1 em { color: var(--green); font-style: normal; }
+.intro p { margin-top: 9px; font-size: 1rem; color: var(--muted); line-height: 1.5; }
+.tabs { display: flex; gap: 26px; border-bottom: 1px solid var(--line); }
+.tabs button { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 5px; margin-bottom: -1px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: var(--muted); cursor: pointer; font-weight: 650; font-size: .9375rem; }
+.tabs button:hover { color: var(--green); }
+.tabs button[aria-selected="true"] { border-bottom-color: var(--green); color: var(--green); }
+.tabs button:focus-visible { outline: 3px solid #347b55; outline-offset: 3px; border-radius: 4px; }
+.use-row { margin-block: 17px; }
+.use-selector { display: flex; align-items: center; gap: 14px; min-width: 0; padding: 0; border: 0; margin: 0; }
+.use-selector legend { float: left; padding: 0; margin-right: 15px; font-size: .9375rem; font-weight: 700; }
+.use-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.use-option { position: relative; cursor: pointer; }
+.use-option input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.use-option span { display: inline-flex; align-items: center; gap: 7px; border: 1px solid var(--line); background: #fffefc; padding: 8px 11px; min-height: 38px; border-radius: 7px; color: var(--muted); font-size: .875rem; font-weight: 600; }
+.use-option span::before { content: ''; width: 13px; height: 13px; flex: none; border: 1px solid #7b9586; border-radius: 50%; }
+.use-option:hover span { border-color: #659477; }
+.use-option input:checked + span { color: #174731; background: var(--mint); border-color: #87ac94; }
+.use-option input:checked + span::before { border: 4px solid #277048; background: #fff; }
+.use-option input:focus-visible + span { outline: 3px solid #347b55; outline-offset: 3px; }
+.recommendation { display: flex; align-items: center; gap: 13px; background: var(--mint); border: 1px solid #d0e6d7; border-radius: 12px; padding: 11px 14px; min-height: 65px; margin-bottom: 17px; }
+.recommendation-icon { display: grid; place-items: center; flex: 0 0 39px; height: 39px; background: #d7ebde; color: var(--green); border-radius: 9px; }
+.recommendation-label { color: var(--green); font-size: .8125rem; font-weight: 750; margin-bottom: 2px; }
+.recommendation-copy { font-size: .9375rem; line-height: 1.45; }
+.reason-divider { display: inline-block; width: 4px; height: 4px; background: #658574; border-radius: 50%; margin: 0 9px 3px; }
+.comparison { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.product { background: #fffefc; min-width: 0; padding: 11px; border: 1px solid var(--line); border-radius: 15px; box-shadow: 0 2px 4px #182b2010; }
+.product.recommended { border-color: #327755; box-shadow: 0 0 0 1px #327755, 0 5px 15px #24603b13; }
+.card-top { display: flex; align-items: center; flex-wrap: wrap; gap: 5px; justify-content: space-between; min-height: 33px; margin-bottom: 7px; }
+.role, .best { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; font-size: .75rem; font-weight: 700; border-radius: 6px; padding: 5px 7px; }
+.role { color: #40574b; background: #f0f2ee; }
+.selection .role { background: #e0ece6; color: #244b39; }
+.best { color: #fff; background: #1d593d; }
+.photo { display: block; width: 100%; height: auto; aspect-ratio: 1.72; object-fit: cover; border-radius: 9px; background: #eef0ef; }
+.card-copy { padding: 12px 7px 6px; }
+.card-copy h2 { font-size: 1.125rem; line-height: 1.25; letter-spacing: -.025em; font-weight: 690; }
+.price { margin-top: 3px; font-size: 1.8rem; font-weight: 750; letter-spacing: -.055em; }
+.price-note { margin-top: 2px; color: var(--green); font-size: .875rem; font-weight: 750; }
+.selection .price-note { color: var(--muted); font-weight: 550; }
+.upgrade .price-note { color: #5b4933; }
+.features { list-style: none; margin: 11px 0 0; padding: 10px 0 0; border-top: 1px solid var(--line); display: grid; gap: 7px; }
+.features li { display: flex; align-items: flex-start; gap: 7px; color: #344b3e; font-size: .875rem; line-height: 1.4; }
+.feature-icon { width: 18px; height: 18px; flex: 0 0 18px; border-radius: 50%; display: grid; place-items: center; background: #eaf3ec; color: var(--green); }
+.feature-icon.minus { background: #f2ede5; color: #675139; }
+
+@media (max-width: 940px) {
+  .shell { width: calc(100% - 42px); }
+  .comparison { gap: 11px; }
+  .card-top { min-height: 56px; align-content: center; }
+}
+
+@media (max-width: 690px) {
+  .shell { width: calc(100% - 32px); }
+  .header-inner { min-height: 63px; gap: 5px; justify-content: space-between; }
+  .header-feature { display: none; }
+  .intro { padding-top: 25px; margin-bottom: 17px; }
+  .tabs { gap: clamp(6px, 3vw, 20px); }
+  .tabs button { gap: 5px; padding-inline: 2px; font-size: .875rem; }
+  .tabs svg { width: 16px; flex: 0 0 16px; }
+  .use-selector { display: block; }
+  .use-selector legend { float: none; margin-bottom: 8px; }
+  .recommendation { align-items: flex-start; }
+  .comparison { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .card-top { min-height: 32px; }
+  main { padding-bottom: 28px; }
+}
